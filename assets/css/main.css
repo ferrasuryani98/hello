@@ -2848,12 +2848,17 @@ input, select, textarea {
 				color: #ffffff;
 			}
 
+			.main.style2 h2 { 
+  				font-size: 1.8rem; 
+			}
+
 			.main.style2 header p {
 				color: #ffffff;
 			}
 
 			.main.style2 header.major:after {
 				background: #ffffff;
+				margin: 0 0 1.25rem; 
 			}
 
 			.main.style2 input[type="submit"],
@@ -3518,7 +3523,7 @@ input, select, textarea {
 	}
 
 /* ===== Custom overrides (put at end of main.css) ===== */
-#two .exp-wrap { min-height:100vh; display:flex; flex-direction:column; justify-content:center; }
+#two .exp-wrap { min-height:auto; display:flex; flex-direction:column; justify-content:center; }
 .align-center { text-align:center; }
 #two .row.align-center { justify-content:center; }
 #two .col-4 { text-align:center; padding:1rem; }
