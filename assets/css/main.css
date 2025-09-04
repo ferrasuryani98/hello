@@ -3636,4 +3636,23 @@ input, select, textarea {
   outline: none;
 }
 
+/* pill list */
+.skill-pills{
+  list-style:none; padding:0; margin:.75rem 0 0;
+  display:flex; flex-wrap:wrap; gap:.4rem .5rem; justify-content:center;
+}
+
+/* small white buttons */
+.pill{
+  display:inline-flex; align-items:center; gap:.25rem;
+  padding:.3rem .6rem;
+  background:#fff; color:#111827;                      /* dark text on white */
+  border:1px solid rgba(0,0,0,.08);
+  border-radius:999px;
+  font-size:.78rem; font-weight:600; line-height:1;
+  text-decoration:none;
+  box-shadow:0 2px 8px rgba(0,0,0,.08);
+  transition:transform .12s ease, box-shadow .12s ease;
+}
+.pill:hover{ transform:translateY(-1px); box-shadow:0 6px 16px rgba(0,0,0,.12); }
 
