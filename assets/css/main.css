@@ -3665,7 +3665,11 @@ ul.skill-pills > li::marker { content: ""; }  /* Safari fallback */
 
 /* Outline pills: white border, transparent bg, white bold text */
 .skill-pills .button,
-.skill-pills .pill,
+#two .skill-pills .pill {
+  font-size: .92rem !important;   /* was ~.78rem */
+  padding: .5rem 1rem !important; /* a bit taller/wider */
+  border-width: 2px;              /* keeps outline balanced */
+}
 ul.actions.special.skill-pills .button {
   display: inline-flex;
   align-items: center;
@@ -3679,6 +3683,15 @@ ul.actions.special.skill-pills .button {
   letter-spacing: .02em;
   text-transform: none;             /* or uppercase if you prefer */
   box-shadow: none;
+}
+
+@media (max-width: 480px){
+  #two .skill-pills .button,
+  #two ul.actions.special.skill-pills .button,
+  #two .skill-pills .pill {
+    font-size: .86rem !important;
+    padding: .45rem .9rem !important;
+  }
 }
 
 .skill-pills .button:hover,
