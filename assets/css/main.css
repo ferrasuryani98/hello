@@ -3566,3 +3566,27 @@ input, select, textarea {
 .fact-text{ display: flex; align-items: baseline; gap: .4rem; flex-wrap: wrap; }
 .fact-text small::after{ content: ":"; margin-left: .2rem; }
 
+
+/* brand blue (tweak as you like) */
+:root { --chip-blue: #2563eb; } /* Tailwind blue-600-ish */
+
+/* outline style for chips */
+.chips .chip{
+  color: var(--chip-blue);
+  border: 1.5px solid var(--chip-blue);
+  background: transparent !important;   /* override any prior fill */
+  border-radius: 999px;
+  padding: .35rem .7rem;
+  font-size: .85rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
+/* optional: nice hover/focus */
+.chips .chip:hover,
+.chips .chip:focus{
+  background: color-mix(in srgb, var(--chip-blue) 10%, transparent);
+  outline: none;
+}
+
+
