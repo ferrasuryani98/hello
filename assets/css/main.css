@@ -3592,7 +3592,7 @@ input, select, textarea {
 
 /* 1) Pick the blue (tweak the hex until it matches your gradient) */
 :root{
-  --brand-blue: #3B82F6;   /* try #2563EB or #3E79C7 if you want a deeper tone */
+  --brand-blue: #006CA5;   /* try #2563EB or #3E79C7 if you want a deeper tone */
 }
 
 /* 2) Header color */
