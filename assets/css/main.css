@@ -3636,10 +3636,32 @@ input, select, textarea {
   outline: none;
 }
 
-/* pill list */
-.skill-pills{
-  list-style:none; padding:0; margin:.75rem 0 0;
-  display:flex; flex-wrap:wrap; gap:.4rem .5rem; justify-content:center;
+/* Make the actions list wrap like pills */
+ul.actions.special.skill-pills {
+  flex-wrap: wrap;
+  row-gap: .5rem;                 /* vertical gap between rows */
+}
+
+/* White-outline, uppercase mini buttons (match your header buttons) */
+.skill-pills .button.pill-outline {
+  background: transparent;
+  color: #fff !important;
+  border: 2px solid rgba(255,255,255,.9);
+  border-radius: 6px;
+  text-transform: uppercase;
+  letter-spacing: .25em;
+  font-weight: 700;
+  font-size: .78rem;              /* smaller than default buttons */
+  padding: .45rem 1rem;           /* compact height */
+}
+
+/* Hover/focus to feel consistent */
+.skill-pills .button.pill-outline:hover {
+  background: rgba(255,255,255,.12);
+}
+.skill-pills .button.pill-outline:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
 }
 
 /* small white buttons */
