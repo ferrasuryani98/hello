@@ -3523,6 +3523,38 @@ input, select, textarea {
 	}
 
 /* ===== Custom overrides (put at end of main.css) ===== */
+/* Reset the list + lay out chips in a row */
+#one ul.chips{
+  list-style: none !important;     /* remove bullets */
+  padding-left: 0 !important;      /* remove left indent */
+  margin: .75rem 0 1rem;
+  display: flex;                   /* row layout */
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+
+/* Make each chip only as wide as its text */
+#one ul.chips > li.chip{
+  display: inline-flex !important; /* override any block/100% width */
+  align-items: center;
+  width: auto !important;
+  max-width: 100%;
+  white-space: nowrap;             /* keep on one line */
+  border-radius: 999px;
+  padding: .35rem .7rem;
+
+  /* outline style: blue text + border, transparent fill */
+  color: #2563eb;
+  border: 1.5px solid #2563eb;
+  background: transparent !important;
+}
+
+/* In case the theme draws bullets with pseudo-elements */
+#one ul.chips > li.chip::marker { content: ""; }
+#one ul.chips > li.chip:before { content: none !important; }
+
+
+
 #two .exp-wrap { min-height:auto; display:flex; flex-direction:column; justify-content:center; }
 .align-center { text-align:center; }
 #two .row.align-center { justify-content:center; }
