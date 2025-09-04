@@ -3583,11 +3583,11 @@ input, select, textarea {
 /* Make the name header bold */
 /* solid white card (use this or the glass option below) */
 #one .summary-card{
-  background: #fff;
+  background: #ffffff;                     /* or rgba(255,255,255,.9) */
   border: 1px solid rgba(17,24,39,.12);
   border-radius: 16px;
   padding: 1.5rem 1.75rem;
-  box-shadow: 0 10px 30px rgba(0,0,0,.06);
+  box-shadow: 0 10px 30px rgba(0,0,0,.08);
 }
 
 #one .summary-card header.major h2 { margin-bottom: .4rem; font-weight: 700; }
@@ -3706,4 +3706,42 @@ ul.actions.special.skill-pills .button {
   color:#2563EB;                       /* blue */
   filter: drop-shadow(0 8px 16px rgba(37,99,235,.25));
 }
+
+/* ===== Library (#three) typography scale ===== */
+#three{
+  --fs-h3: 1.15rem;         /* project title */
+  --fs-body: .95rem;        /* description */
+  --lh-body: 1.6;
+}
+
+#three .project-card h3{
+  font-size: var(--fs-h3);
+  font-weight: 700;
+  margin: .75rem 0 .4rem;
+}
+
+#three .project-card p{
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  margin: 0 0 1rem;
+}
+
+/* ===== Small blue pill button ===== */
+#three .project-card .actions .button.btn-blue-sm{
+  background: #2563eb !important;   /* blue fill */
+  border-color: #2563eb !important;
+  color: #fff !important;
+  font-size: .78rem;                 /* smaller text */
+  letter-spacing: .12em;             /* subtle tracking */
+  text-transform: uppercase;
+  border-radius: 999px;
+  padding: .45rem 1rem;              /* compact height */
+  box-shadow: 0 6px 16px rgba(37,99,235,.18);
+}
+
+#three .project-card .actions .button.btn-blue-sm:hover{
+  filter: brightness(.95);
+  transform: translateY(-1px);
+}
+
 
