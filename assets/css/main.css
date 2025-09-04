@@ -3580,9 +3580,12 @@ input, select, textarea {
 
 /* --- About summary card tweaks --- */
 /* space between name and tagline */
-.summary-card header.major h2 {
-  margin-bottom: .5rem;   /* adjust to taste */
+/* Make the name header bold */
+#one .summary-card header.major h2,
+#one header.major h2 {
+  font-weight: 700 !important;   /* 600–800 also fine */
 }
+
 
 .summary-card header.major .tagline {
   display: block;          /* ensures the margin applies cleanly */
