@@ -3779,4 +3779,7 @@ ul.actions.special.skill-pills .button {
 #three .project-card .actions .button.btn-blue-sm:hover{ filter:brightness(.95); transform:translateY(-1px); }
 #three .project-card .actions .button.btn-blue-outline-sm:hover{ background:rgba(37,99,235,.08) !important; }
 
-
+#three .row.gtr-150 { align-items: stretch; }
+#three .col-4 { display: flex; }
+#three .project-card { flex: 1; display: flex; flex-direction: column; }
+#three .project-card .actions { margin-top: auto; }
