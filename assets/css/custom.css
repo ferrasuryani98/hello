@@ -1,0 +1,180 @@
+/* =====================================================
+   Ferra — Site Overrides (load AFTER theme main.css)
+   Structure: Tokens → Base → Utilities → Components → Sections → Media
+   ===================================================== */
+
+/* ===== 0) TOKENS ===== */
+/* (includes user's requested brand tokens) */
+:root{
+  --brand-blue: #2563eb;        /* base */
+  --brand-blue-dark: #1d4ed8;   /* hover/active */
+}
+
+/* ===== 1) BASE / RESET TWEAKS ===== */
+#one ul.chips,
+ul.actions.special.skill-pills,
+ul.skill-pills{
+  list-style: none !important;
+  padding-left: 0 !important;
+  margin: .6rem 0 0;
+}
+
+/* ===== 2) UTILITIES ===== */
+.align-center{ text-align:center; }
+#two .row.align-center{ justify-content:center; }
+.actions-row{ display:flex; justify-content:center; flex-wrap:wrap; gap:.5rem; }
+
+/* Center content inside pills/buttons everywhere (user block included) */
+.skill-pills .pill,
+.skill-pills .button,
+#three .project-card .actions .button{
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  line-height:1 !important;
+  text-align:center !important;
+  padding:.5rem 1rem;  /* symmetrical padding */
+}
+.skill-pills .pill.icon::before,
+#three .project-card .actions .button.icon::before{ margin:0 .4em 0 0; }
+
+/* ===== 3) COMPONENTS ===== */
+
+/* Chips (blue outline + text) */
+#one ul.chips{
+  display:flex; flex-wrap:wrap; gap:.5rem; margin:.75rem 0 1rem;
+}
+#one ul.chips > li.chip{
+  display:inline-flex !important;
+  align-items:center;
+  width:auto !important; max-width:100%; white-space:nowrap;
+  border-radius:999px; padding:.35rem .7rem;
+  color:var(--brand-blue); background:transparent !important;
+  border:1.5px solid var(--brand-blue);
+}
+#one ul.chips > li.chip::marker{ content:""; }
+#one ul.chips > li.chip:before{ content:none !important; }
+
+/* Summary card (user block included) */
+.summary-card{
+  background:#fff !important;
+  border:1.5px solid rgba(37,99,235,.20) !important; /* light brand-blue */
+  border-radius:16px !important;
+  box-shadow:0 10px 30px rgba(37,99,235,.06);
+  padding:1.25rem 1.5rem;
+}
+.summary-card header.major h2,
+.brand-title{  /* reusable header style like “Ferra Suryani” */
+  color:var(--brand-blue) !important;
+  font-weight:700;
+  letter-spacing:.02em;
+  margin:0 0 .4rem;
+  font-size:clamp(1.6rem, 3.2vw, 2.1rem);
+}
+.summary-card .tagline{
+  font-style:italic; font-size:.95rem; color:#8a8a8a; margin-top:.25rem; display:block;
+}
+
+/* Quick facts tiles */
+.quick-facts{
+  display:grid; grid-template-columns:repeat(2, minmax(0,1fr));
+  gap:.75rem 1rem; margin:.25rem 0 1.25rem;
+}
+.fact{
+  display:grid; grid-template-columns:20px 1fr; align-items:start; gap:.6rem;
+  padding:.6rem .75rem; border:1px solid rgba(0,0,0,.06); border-radius:12px;
+  background:rgba(255,255,255,.6);
+}
+.fact .icon{ margin-top:.15rem; }
+.fact-text{ display:flex; align-items:baseline; gap:.4rem; flex-wrap:wrap; }
+.fact-text small::after{ content:":"; margin-left:.2rem; }
+
+/* Expertise cards (section #two) */
+#two .exp-wrap{ min-height:auto; display:flex; flex-direction:column; justify-content:center; }
+#two .col-4{ display:flex; text-align:center; padding:1rem; }
+#two .expertise-card{
+  flex:1; padding:1.25rem 1.5rem;
+  border:1px solid rgba(255,255,255,.28);
+  border-radius:14px; background:rgba(255,255,255,.06);
+  backdrop-filter:blur(4px);
+  box-shadow:0 8px 24px rgba(0,0,0,.08); text-align:center;
+}
+#two .expertise-card h4{ margin-top:0; }
+#two .expertise-card:hover{ transform:translateY(-2px); box-shadow:0 12px 36px rgba(0,0,0,.12); }
+
+/* White-outline, white-text pills on dark/gradient (user block included) */
+ul.actions.special.skill-pills,
+ul.skill-pills{ display:flex; flex-wrap:wrap; justify-content:center; gap:.5rem; }
+ul.actions.special.skill-pills .button,
+#two .skill-pills .pill,
+.skill-pills .pill{
+  display:inline-flex; align-items:center;
+  border-radius:999px;
+  background:transparent !important;
+  border:2px solid rgba(255,255,255,.95) !important;
+  color:#fff !important;
+  font-weight:700; font-size:.82rem; letter-spacing:.02em;
+  text-transform:none;
+  box-shadow:none;
+  padding:.35rem .8rem;
+}
+.skill-pills .pill:hover{ background:rgba(255,255,255,.12) !important; }
+
+/* Small neutral pill (white) */
+.pill{
+  display:inline-flex; align-items:center; gap:.25rem; padding:.3rem .6rem;
+  background:#fff; color:#111827; border:1px solid rgba(0,0,0,.08);
+  border-radius:999px; font-size:.78rem; font-weight:600; line-height:1;
+  text-decoration:none; box-shadow:0 2px 8px rgba(0,0,0,.08);
+  transition:transform .12s ease, box-shadow .12s ease;
+}
+.pill:hover{ transform:translateY(-1px); box-shadow:0 6px 16px rgba(0,0,0,.12); }
+
+/* Project library (section #three) */
+#three{ --fs-h3:1.15rem; --fs-body:.95rem; --lh-body:1.6; }
+#three .row.gtr-150{ align-items:stretch; }
+#three .col-4{ display:flex; }
+#three .project-card{ flex:1; display:flex; flex-direction:column; }
+#three .project-card h3{ font-size:var(--fs-h3); font-weight:700; margin:.75rem 0 .4rem; }
+#three .project-card p{ font-size:var(--fs-body); line-height:var(--lh-body); margin:0 0 1rem; }
+#three .project-card .actions{ margin-top:auto; }
+
+/* Project buttons */
+#three .project-card .actions .button{
+  border:2px solid var(--brand-blue) !important;
+  color:var(--brand-blue) !important;
+  background:transparent !important;
+  border-radius:999px; padding:.45rem 1rem; font-size:.78rem; font-weight:700;
+  letter-spacing:.12em; text-transform:uppercase; box-shadow:none !important;
+}
+#three .project-card .actions .button:hover{ background:rgba(37,99,235,.08) !important; }
+
+/* Solid brand variant */
+#three .project-card .actions .button.btn-blue-sm{
+  background:var(--brand-blue) !important; color:#fff !important; border-color:var(--brand-blue) !important;
+  box-shadow:0 6px 16px rgba(37,99,235,.18) !important;
+}
+#three .project-card .actions .button.btn-blue-sm:hover{
+  background:var(--brand-blue-dark) !important; border-color:var(--brand-blue-dark) !important;
+  transform:translateY(-1px);
+}
+
+/* Optional outline alias */
+#three .project-card .actions .button.btn-blue-outline-sm{
+  background:transparent !important; color:var(--brand-blue) !important; border-color:var(--brand-blue) !important;
+}
+
+/* Project icons */
+.proj-icon{
+  width:120px; height:120px; display:block; margin:0 auto;
+  color:#2563EB; filter:drop-shadow(0 8px 16px rgba(37,99,235,.25));
+}
+
+/* ===== 4) MEDIA QUERIES ===== */
+@media (max-width:480px){
+  ul.actions.special.skill-pills .button,
+  #two .skill-pills .button,
+  #two .skill-pills .pill{
+    font-size:.86rem !important; padding:.45rem .9rem !important;
+  }
+}
