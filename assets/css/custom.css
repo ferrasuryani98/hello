@@ -195,15 +195,15 @@ ul.actions.special.skill-pills .button,
 }
 
 /* Project titles — brand blue + bolder */
-#three .project-card h4,
-#three .project-card h4 a{
+#three .project-card h3,
+#three .project-card h3 a{
   color: var(--brand-blue) !important;  /* uses your token */
   font-weight: 800;                      /* bump from 700 → 800 */
   letter-spacing: .01em;                 /* optional: a touch tighter */
 }
 
 /* Keep hover consistent (optional) */
-#three .project-card h4 a:hover{
+#three .project-card h3 a:hover{
   color: var(--brand-blue-dark) !important;
   text-decoration: none;
 }
