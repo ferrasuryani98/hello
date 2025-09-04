@@ -208,3 +208,17 @@ ul.actions.special.skill-pills .button,
   text-decoration: none;
 }
 
+/* One source of truth for icon blue */
+:root{ --brand-blue: #006FB9; }
+
+/* Any inline SVG with this class will take the brand color */
+svg.proj-icon{
+  color: var(--brand-blue) !important;          /* drives stroke/fill via currentColor */
+  /* optional: keep the soft blue glow consistent */
+  filter: drop-shadow(0 8px 16px rgba(37,99,235,.25));
+}
+
+/* Safety: if an SVG hard-codes stroke/fill, force it back to currentColor */
+svg.proj-icon [stroke]{ stroke: currentColor !important; }
+svg.proj-icon [fill]:not([fill="none"]){ fill: currentColor !important; }
+
