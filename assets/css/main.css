@@ -3590,7 +3590,18 @@ input, select, textarea {
   box-shadow: 0 10px 30px rgba(0,0,0,.08);
 }
 
-#one .summary-card header.major h2 { margin-bottom: .4rem; font-weight: 700; }
+/* 1) Pick the blue (tweak the hex until it matches your gradient) */
+:root{
+  --brand-blue: #3B82F6;   /* try #2563EB or #3E79C7 if you want a deeper tone */
+}
+
+/* 2) Header color */
+#one .summary-card header.major h2{
+  color: var(--brand-blue) !important;
+  margin-bottom: .4rem; 
+  font-weight: 700;
+}
+
 #one header.major h2 {
   font-weight: 700 !important;   /* 600–800 also fine */
 }
@@ -3630,23 +3641,19 @@ input, select, textarea {
 /* brand blue (tweak as you like) */
 :root { --chip-blue: #2563eb; } /* Tailwind blue-600-ish */
 
-/* outline style for chips */
-.chips .chip{
-  color: var(--chip-blue);
-  border: 1.5px solid var(--chip-blue);
-  background: transparent !important;   /* override any prior fill */
+/* 3) Chips: blue outline + blue text + transparent fill */
+#one .chips .chip{
+  color: var(--brand-blue) !important;
+  border: 1.5px solid var(--brand-blue) !important;
+  background: transparent !important;
   border-radius: 999px;
   padding: .35rem .7rem;
-  font-size: .85rem;
-  font-weight: 500;
-  line-height: 1;
+  font-weight: 600;
 }
 
-/* optional: nice hover/focus */
-.chips .chip:hover,
-.chips .chip:focus{
-  background: color-mix(in srgb, var(--chip-blue) 10%, transparent);
-  outline: none;
+/* Optional: gentle hover */
+#one .chips .chip:hover{
+  background: color-mix(in srgb, var(--brand-blue) 12%, transparent);
 }
 
 /* Remove bullets + layout */
@@ -3811,3 +3818,29 @@ ul.actions.special.skill-pills .button {
   outline: 2px solid #2563eb;
   outline-offset: 2px;
 }
+
+/* Expertise pills — white outline, transparent fill, white text */
+ul.actions.special.skill-pills,
+ul.skill-pills {
+  list-style: none !important;
+  padding-left: 0 !important;
+  margin: .6rem 0 0;
+  display: flex; flex-wrap: wrap; justify-content: center; gap: .5rem;
+}
+ul.actions.special.skill-pills > li::marker,
+ul.skill-pills > li::marker { content: ""; }  /* Safari fallback */
+
+ul.actions.special.skill-pills .button,
+.skill-pills .button {
+  display: inline-flex; align-items: center;
+  padding: .35rem .8rem;
+  border-radius: 999px;
+  background: transparent !important;
+  box-shadow: none !important;              /* kill the gray outline */
+  border: 2px solid rgba(255,255,255,.95) !important;
+  color: #fff !important;
+  font-weight: 700; font-size: .82rem; letter-spacing: .02em;
+  text-transform: none;
+}
+.skill-pills .button:hover { background: rgba(255,255,255,.12) !important; }
+
