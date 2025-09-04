@@ -3701,3 +3701,9 @@ ul.actions.special.skill-pills .button {
 }
 .pill:hover{ transform:translateY(-1px); box-shadow:0 6px 16px rgba(0,0,0,.12); }
 
+.proj-icon{
+  width:120px; height:120px; display:block; margin:0 auto;
+  color:#2563EB;                       /* blue */
+  filter: drop-shadow(0 8px 16px rgba(37,99,235,.25));
+}
+
