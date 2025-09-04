@@ -3636,33 +3636,43 @@ input, select, textarea {
   outline: none;
 }
 
-/* Make the actions list wrap like pills */
-ul.actions.special.skill-pills {
+/* Remove bullets + layout */
+ul.actions.special.skill-pills,
+ul.skill-pills {
+  list-style: none !important;      /* no bullets */
+  padding-left: 0 !important;       /* remove left indent */
+  margin: .6rem 0 0;
+  display: flex;
   flex-wrap: wrap;
-  row-gap: .5rem;                 /* vertical gap between rows */
+  justify-content: center;
+  gap: .5rem;
 }
+ul.actions.special.skill-pills > li::marker,
+ul.skill-pills > li::marker { content: ""; }  /* Safari fallback */
 
-/* White-outline, uppercase mini buttons (match your header buttons) */
-.skill-pills .button.pill-outline {
-  background: transparent;
+/* Outline pills: white border, transparent bg, white bold text */
+.skill-pills .button,
+.skill-pills .pill,
+ul.actions.special.skill-pills .button {
+  display: inline-flex;
+  align-items: center;
+  padding: .35rem .8rem;
+  border-radius: 999px;
+  background: transparent !important;
+  border: 2px solid rgba(255,255,255,.95) !important;
   color: #fff !important;
-  border: 2px solid rgba(255,255,255,.9);
-  border-radius: 6px;
-  text-transform: uppercase;
-  letter-spacing: .25em;
   font-weight: 700;
-  font-size: .78rem;              /* smaller than default buttons */
-  padding: .45rem 1rem;           /* compact height */
+  font-size: .78rem;
+  letter-spacing: .02em;
+  text-transform: none;             /* or uppercase if you prefer */
+  box-shadow: none;
 }
 
-/* Hover/focus to feel consistent */
-.skill-pills .button.pill-outline:hover {
-  background: rgba(255,255,255,.12);
+.skill-pills .button:hover,
+.skill-pills .pill:hover {
+  background: rgba(255,255,255,.12) !important; /* subtle hover */
 }
-.skill-pills .button.pill-outline:focus-visible {
-  outline: 2px solid #fff;
-  outline-offset: 2px;
-}
+
 
 /* small white buttons */
 .pill{
