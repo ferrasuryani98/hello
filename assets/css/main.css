@@ -3744,4 +3744,26 @@ ul.actions.special.skill-pills .button {
   transform: translateY(-1px);
 }
 
+/* layout so pills sit side-by-side and wrap on mobile */
+#three .project-card .actions.actions-row {
+  display: flex; justify-content: center; flex-wrap: wrap; gap: .5rem;
+}
+
+/* filled blue pill (you already have this) */
+#three .project-card .actions .button.btn-blue-sm{
+  background:#2563eb !important; border-color:#2563eb !important;
+  color:#fff !important; font-size:.78rem; letter-spacing:.12em;
+  text-transform:uppercase; border-radius:999px; padding:.45rem 1rem;
+}
+
+/* outline blue pill (for Medium) */
+#three .project-card .actions .button.btn-blue-outline-sm{
+  background:transparent !important; color:#2563eb !important;
+  border:2px solid #2563eb !important; font-size:.78rem; letter-spacing:.12em;
+  text-transform:uppercase; border-radius:999px; padding:.45rem 1rem;
+}
+
+#three .project-card .actions .button.btn-blue-sm:hover{ filter:brightness(.95); transform:translateY(-1px); }
+#three .project-card .actions .button.btn-blue-outline-sm:hover{ background:rgba(37,99,235,.08) !important; }
+
 
