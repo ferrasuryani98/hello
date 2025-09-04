@@ -6,7 +6,7 @@
 /* ===== 0) TOKENS ===== */
 /* (includes user's requested brand tokens) */
 :root{
-  --brand-blue: #2563eb;        /* base */
+  --brand-blue: #006FB9;        /* base */
   --brand-blue-dark: #1d4ed8;   /* hover/active */
 }
 
@@ -178,3 +178,33 @@ ul.actions.special.skill-pills .button,
     font-size:.86rem !important; padding:.45rem .9rem !important;
   }
 }
+
+
+#three header.major h2{
+  color: var(--brand-blue) !important;
+  font-weight: 700;
+  letter-spacing: .02em;
+  text-transform: none !important;
+  margin: 0 0 .4rem;
+  font-size: clamp(1.6rem, 3.2vw, 2.1rem);
+}
+#three header.major p{
+  color: #006FB9;
+  font-size: 1rem;
+  margin-top: .25rem;
+}
+
+/* Project titles — brand blue + bolder */
+#three .project-card h4,
+#three .project-card h4 a{
+  color: var(--brand-blue) !important;  /* uses your token */
+  font-weight: 800;                      /* bump from 700 → 800 */
+  letter-spacing: .01em;                 /* optional: a touch tighter */
+}
+
+/* Keep hover consistent (optional) */
+#three .project-card h4 a:hover{
+  color: var(--brand-blue-dark) !important;
+  text-decoration: none;
+}
+
