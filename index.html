@@ -1,775 +1,668 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Ferra Suryani | Data Scientist </title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css">
-		<link rel="stylesheet" href="assets/css/custom.css?v=4">  <!-- after main.css -->
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Ferra Suryani | Data Scientist</title>
+<meta name="description" content="Ferra Suryani — NYC data scientist working across causal inference, experimentation, and machine learning for growth and measurement." />
+<meta property="og:title" content="Ferra Suryani | Data Scientist" />
+<meta property="og:description" content="Causal inference, experimentation, and ML for growth & measurement." />
+<meta property="og:type" content="website" />
 
-		<!-- Header -->
-<section id="header">
-  <div class="inner">
-    <span class="icon solid major fa-cloud"></span>
-    <h1>Hi there - I'm <strong>Ferra</strong>!<br>
-    Data Scientist by day, EDM DJ/Producer by night</h1>
-    <p>Causal Inference • ML and AI for Growth & Measurement • Quantitative Methods </p>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <ul class="actions special">
-      <!-- Local PDF (same origin) -->
-      <li>
-        <a href="https://drive.google.com/file/d/1DmAcDTZvVwdrJv8QQC9LLRqPNVZ5a53x/view?usp=sharing" class="button">
-          Résumé
+<style>
+  :root{
+    --neutral:#F4F7FC;      /* 60% dominant background */
+    --paper:#FFFFFF;
+    --blue:#0062AD;         /* 30% structure — sampled from screenshot */
+    --blue-deep:#004E8A;
+    --blue-tint:#E2EFF8;
+    --teal:#0F52BA;         /* 10% accent (CTAs) — clicks & active states only */
+    --teal-deep:#0B419A;
+    --ink:#333840;          /* dark grey instead of black */
+    --slate:#55606E;
+    --slate-light:#8792A3;
+    --line:#E2E8F2;
+    --radius:14px;
+    --shadow:0 1px 2px rgba(11,15,25,.04), 0 12px 32px rgba(14,74,164,.06);
+    --shadow-hover:0 2px 6px rgba(11,15,25,.06), 0 18px 44px rgba(14,74,164,.13);
+    --maxw:1120px;
+    --font-head:'Montserrat',Arial,sans-serif;
+    --font-body:'Inter',Arial,sans-serif;
+  }
+
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;font-family:var(--font-body);color:var(--ink);
+    background:var(--neutral);line-height:1.7;-webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--blue);text-decoration:none}
+  h1,h2,h3,h4{font-family:var(--font-head);font-weight:700;line-height:1.15;letter-spacing:-.02em;margin:0;color:var(--ink)}
+  h1,h2{color:var(--blue)}
+  p{margin:0 0 1rem}
+  img{max-width:100%;display:block}
+
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  .section{padding:96px 0}
+  .section--alt{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  section[id]{scroll-margin-top:84px}
+
+  .eyebrow{
+    font-family:var(--font-head);font-size:.9rem;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--blue);font-weight:400;margin:0 0 14px;display:flex;align-items:center;gap:10px;
+  }
+  .eyebrow::before{content:"";width:26px;height:2px;background:var(--blue);display:inline-block}
+  .section-head{max-width:640px;margin-bottom:40px}
+  .section-head p{color:var(--slate)}
+
+  /* ---------- NAV (blue structural bar) ---------- */
+  header.nav{position:sticky;top:0;z-index:50;background:var(--blue);border-bottom:1px solid var(--blue-deep)}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .brand{font-family:var(--font-head);font-weight:700;color:#fff;letter-spacing:-.01em;font-size:1rem}
+  .brand b{color:#fff}
+  .nav-links{display:flex;align-items:center;gap:28px;list-style:none;margin:0;padding:0}
+  .nav-links a{font-family:var(--font-head);font-size:.9rem;color:rgba(255,255,255,.82);font-weight:500;position:relative;padding:4px 0;transition:color .18s ease}
+  .nav-links a:hover,.nav-links a.active{color:#fff}
+  .nav-links a.active::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:2px;background:#fff;border-radius:2px}
+  .nav-cta{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-head);background:var(--teal);color:#fff;font-weight:700;font-size:.88rem;padding:9px 16px;border-radius:10px;transition:background .18s ease,transform .18s ease}
+  .nav-cta:hover{background:var(--teal-deep);transform:translateY(-1px)}
+  .nav-toggle{display:none;background:none;border:0;cursor:pointer;padding:8px}
+  .nav-toggle span{display:block;width:22px;height:2px;background:#fff;margin:4px 0;transition:.2s}
+
+  /* ---------- BUTTONS ---------- */
+  .btn{display:inline-flex;align-items:center;gap:9px;font-family:var(--font-head);font-weight:700;font-size:.92rem;border-radius:11px;padding:11px 20px;cursor:pointer;transition:all .18s ease;border:1.5px solid transparent}
+  .btn svg{width:16px;height:16px}
+  .btn-primary{background:var(--teal);color:#fff}
+  .btn-primary:hover{background:var(--teal-deep);transform:translateY(-2px);box-shadow:0 10px 24px rgba(15,168,186,.32)}
+  .btn-outline{background:var(--paper);color:var(--blue);border-color:var(--line)}
+  .btn-outline:hover{border-color:var(--blue);transform:translateY(-2px)}
+
+  /* ---------- HERO ---------- */
+  .hero{padding:76px 0 84px}
+  .hero-inner{max-width:820px}
+  .hero h1{font-size:clamp(2.4rem,5.2vw,4rem);letter-spacing:-.03em;font-weight:700}
+  .hero-sub{font-size:1.12rem;color:var(--slate);max-width:560px;margin:20px 0 10px}
+  .hero-aside{font-size:.92rem;color:var(--slate-light);font-style:italic;margin-bottom:26px}
+  .hero-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:28px}
+  .hero-stack{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:.8rem;color:var(--slate);letter-spacing:.02em}
+  .hero-stack span{display:inline-flex;align-items:center;gap:8px;font-weight:500}
+  .hero-stack span::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--blue)}
+
+  /* ---------- ABOUT ---------- */
+  .about-grid{display:grid;grid-template-columns:1fr 320px;gap:48px;align-items:start}
+  .about-bio p{color:var(--slate);font-size:1.05rem}
+  .about-bio p strong{color:var(--ink);font-weight:600}
+  .chips{display:flex;flex-wrap:wrap;gap:9px;list-style:none;padding:0;margin:22px 0 0}
+  .chip{font-size:.78rem;color:var(--blue);background:var(--blue-tint);padding:7px 12px;border-radius:8px;font-weight:500}
+  .glance{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+  .glance-head{font-family:var(--font-head);background:var(--blue);color:#fff;font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;padding:13px 18px;font-weight:700}
+  .glance-list{list-style:none;margin:0;padding:0}
+  .glance-list li{padding:14px 18px;border-bottom:1px solid var(--line)}
+  .glance-list li:last-child{border-bottom:0}
+  .glance-list small{font-family:var(--font-head);display:block;font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--slate-light);margin-bottom:4px}
+  .glance-list strong{font-size:.98rem;color:var(--ink);font-weight:600}
+
+  /* ---------- EXPERTISE ---------- */
+  .cards-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .xcard{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:26px;transition:transform .2s ease,box-shadow .2s ease}
+  .xcard:hover{transform:translateY(-4px);box-shadow:var(--shadow-hover)}
+  .xcard .xnum{font-family:var(--font-head);font-size:.8rem;font-weight:700;color:var(--blue);letter-spacing:.08em;margin-bottom:14px}
+  .xcard h3{font-size:1.15rem;margin-bottom:10px}
+  .xcard p{color:var(--slate);font-size:.95rem;margin-bottom:16px}
+  .pills{display:flex;flex-wrap:wrap;gap:7px;list-style:none;padding:0;margin:0}
+  .pill{font-size:.72rem;color:var(--slate);border:1px solid var(--line);padding:5px 9px;border-radius:7px;font-weight:500}
+
+  /* ---------- EXPERIENCE ---------- */
+  .timeline{position:relative;max-width:820px}
+  .timeline::before{content:"";position:absolute;left:9px;top:8px;bottom:8px;width:2px;background:var(--blue-tint)}
+  .tl-item{position:relative;padding:0 0 40px 44px}
+  .tl-item:last-child{padding-bottom:0}
+  .tl-dot{position:absolute;left:0;top:4px;width:20px;height:20px;border-radius:50%;background:var(--paper);border:2px solid var(--blue);display:flex;align-items:center;justify-content:center}
+  .tl-dot::after{content:"";width:8px;height:8px;border-radius:50%;background:var(--blue)}
+  .tl-item.current .tl-dot{border-color:var(--teal)}
+  .tl-item.current .tl-dot::after{background:var(--teal)}
+  .tl-date{font-family:var(--font-head);font-size:.74rem;color:var(--slate-light);letter-spacing:.06em;font-weight:500;text-transform:uppercase;margin-bottom:6px}
+  .tl-role{font-size:1.2rem;font-weight:700}
+  .tl-company{color:var(--blue);font-weight:600;font-size:.98rem;margin-bottom:12px}
+  .tl-list{margin:0;padding-left:18px;color:var(--slate);font-size:.95rem}
+  .tl-list li{margin-bottom:7px}
+  .tl-tags{display:flex;flex-wrap:wrap;gap:7px;list-style:none;padding:0;margin:14px 0 0}
+
+  /* ---------- SKILLS ---------- */
+  .skill-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+  .skill-block{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:22px 24px}
+  .skill-block h4{font-family:var(--font-head);font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);margin-bottom:14px;font-weight:700}
+  .skill-tags{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:0}
+  .skill-tags li{font-size:.85rem;color:var(--ink);background:var(--neutral);border:1px solid var(--line);padding:6px 11px;border-radius:8px;font-weight:500}
+
+  /* ---------- PROJECTS ---------- */
+  .proj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .proj{display:flex;flex-direction:column;background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:transform .2s ease,box-shadow .2s ease}
+  .proj:hover{transform:translateY(-4px);box-shadow:var(--shadow-hover)}
+  .proj-top{height:104px;background:linear-gradient(135deg,var(--blue-tint),var(--paper));display:flex;align-items:center;justify-content:center;border-bottom:1px solid var(--line);color:var(--blue)}
+  .proj-top svg{width:52px;height:52px}
+  .proj-body{padding:22px;display:flex;flex-direction:column;flex:1}
+  .proj-body h3{font-size:1.06rem;margin-bottom:9px}
+  .proj-body p{color:var(--slate);font-size:.9rem;margin-bottom:16px;flex:1}
+  .proj-tags{display:flex;flex-wrap:wrap;gap:6px;list-style:none;padding:0;margin:0 0 16px}
+  .proj-tags li{font-family:var(--font-head);font-size:.68rem;color:var(--slate-light);letter-spacing:.03em;font-weight:500;text-transform:uppercase}
+  .proj-tags li::after{content:"·";margin-left:6px;color:var(--slate-light)}
+  .proj-tags li:last-child::after{content:""}
+  .proj-links{display:flex;gap:14px}
+  .proj-links a{font-family:var(--font-head);font-size:.84rem;font-weight:700;display:inline-flex;align-items:center;gap:6px}
+  .proj-links a svg{width:14px;height:14px}
+  .proj-links a:hover{color:var(--blue-deep)}
+
+  /* ---------- WRITING ---------- */
+  .posts{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:26px}
+  .post{display:block;background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:24px;transition:transform .2s ease,box-shadow .2s ease}
+  .post:hover{transform:translateY(-3px);box-shadow:var(--shadow-hover)}
+  .post-tag{font-family:var(--font-head);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);margin-bottom:10px;font-weight:700}
+  .post h3{font-size:1.12rem;color:var(--ink);margin-bottom:8px}
+  .post p{color:var(--slate);font-size:.9rem;margin:0}
+  .post-more{font-family:var(--font-head);display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:.9rem}
+
+  /* ---------- EDUCATION ---------- */
+  .edu-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:820px}
+  .edu{display:flex;gap:20px;align-items:flex-start;background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:26px}
+  .edu-mark{flex:0 0 auto;width:52px;height:52px;border-radius:12px;background:var(--blue-tint);display:flex;align-items:center;justify-content:center;color:var(--blue)}
+  .edu-mark svg{width:26px;height:26px}
+  .edu h3{font-size:1.12rem;margin-bottom:4px}
+  .edu .edu-sub{color:var(--blue);font-weight:600;font-size:.92rem;margin-bottom:6px}
+  .edu p{color:var(--slate);font-size:.9rem;margin:0}
+
+  /* ---------- CONTACT ---------- */
+  .contact{background:linear-gradient(135deg,var(--blue),var(--blue-deep));border-radius:22px;padding:60px 48px;text-align:center;color:#fff;position:relative;overflow:hidden}
+  .contact::before{content:"";position:absolute;inset:0;background:radial-gradient(60% 120% at 100% 0%,rgba(255,255,255,.14),transparent 55%)}
+  .contact h2{font-size:clamp(1.8rem,3.6vw,2.6rem);color:#fff;position:relative}
+  .contact p{color:rgba(255,255,255,.82);max-width:480px;margin:14px auto 28px;position:relative}
+  .contact-ctas{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;position:relative}
+  .contact .btn-primary{background:var(--teal);color:#fff}
+  .contact .btn-primary:hover{background:var(--teal-deep)}
+  .contact .btn-outline{background:transparent;color:#fff;border-color:rgba(255,255,255,.45)}
+  .contact .btn-outline:hover{border-color:#fff;background:rgba(255,255,255,.1)}
+
+  /* ---------- FOOTER ---------- */
+  footer{padding:40px 0;border-top:1px solid var(--line);background:var(--paper)}
+  .foot-inner{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px}
+  .foot-social{display:flex;gap:14px;list-style:none;padding:0;margin:0}
+  .foot-social a{width:38px;height:38px;border-radius:10px;border:1px solid var(--line);background:var(--paper);display:flex;align-items:center;justify-content:center;color:var(--slate);transition:all .18s ease}
+  .foot-social a:hover{color:var(--blue);border-color:var(--blue);transform:translateY(-2px)}
+  .foot-social svg{width:18px;height:18px}
+  .foot-copy{font-size:.8rem;color:var(--slate-light)}
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width:900px){
+    .about-grid{grid-template-columns:1fr;gap:30px}
+    .cards-3{grid-template-columns:1fr}
+    .proj-grid{grid-template-columns:1fr 1fr}
+    .skill-grid{grid-template-columns:1fr}
+    .posts{grid-template-columns:1fr}
+    .edu-grid{grid-template-columns:1fr}
+    .nav-links{position:fixed;inset:64px 0 auto 0;background:var(--blue-deep);flex-direction:column;align-items:flex-start;gap:0;padding:8px 24px 20px;box-shadow:var(--shadow);transform:translateY(-140%);transition:transform .28s ease}
+    .nav-links.open{transform:translateY(0)}
+    .nav-links li{width:100%}
+    .nav-links a{display:block;padding:12px 0;width:100%;border-bottom:1px solid rgba(255,255,255,.12)}
+    .nav-links a.active::after{display:none}
+    .nav-toggle{display:block}
+    .nav-desktop-cta{display:none}
+  }
+  @media (max-width:560px){
+    .section{padding:70px 0}
+    .proj-grid{grid-template-columns:1fr}
+    .contact{padding:44px 24px}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    *{animation:none!important;transition:none!important}
+  }
+  @keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+  .reveal{opacity:0}
+  .reveal.in{animation:fadeUp .6s ease both}
+</style>
+</head>
+<body>
+
+<!-- ================= NAV ================= -->
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="#top" class="brand">Ferra<b>.</b>Suryani</a>
+    <nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#writing">Writing</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="https://drive.google.com/file/d/1DmAcDTZvVwdrJv8QQC9LLRqPNVZ5a53x/view?usp=sharing" target="_blank" rel="noopener" class="nav-cta nav-desktop-cta">
+      Résumé
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<a id="top"></a>
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-inner">
+      <p class="eyebrow">Data Scientist · Causal Inference · NYC</p>
+      <h1>I measure what actually drives growth.</h1>
+      <p class="hero-sub">Data scientist working where causal inference, experimentation, and machine learning meet, building the models and pipelines that show growth and marketing teams what's really working.</p>
+      <p class="hero-aside">Data scientist by day, EDM producer by night.</p>
+      <div class="hero-ctas">
+        <a href="mailto:ferra.k.suryani@gmail.com" class="btn btn-primary">
+          Get in touch
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M4 6l8 6 8-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
-      </li>
-
-      <!-- External CV (e.g., Google Drive/Notion) -->
-      <li>
-        <a href="https://drive.google.com/your-cv-link" class="button"
-           target="_blank" rel="noopener">
-          CV
-        </a>
-      </li>
-
-	  <li>
-        <a href="https://github.com/ferrasuryani98" class="button"
-           target="_blank" rel="noopener">
-          GitHub
-        </a>
-      </li>
-
-	<li>
-        <a href="hhttps://www.researchgate.net/profile/Ferra-Suryani" class="button"
-           target="_blank" rel="noopener">
-          ResearchGate
-        </a>
-      </li>
-
-		<li>
-        <a href="https://medium.com/@ferratan1998" class="button"
-           target="_blank" rel="noopener">
-          Medium
-        </a>
-      </li>
-
-      <!-- LinkedIn -->
-      <li>
-        <a href="https://www.linkedin.com/in/ferrasuryani/" class="button"
-           target="_blank" rel="noopener">
+        <a href="https://www.linkedin.com/in/ferrasuryani/" target="_blank" rel="noopener" class="btn btn-outline">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 0 5 8.5a2.5 2.5 0 0 0-.02-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.4c0-1.3 0-2.95-1.8-2.95s-2.08 1.4-2.08 2.85V21H9z"/></svg>
           LinkedIn
         </a>
-      </li>
-    </ul>
-  </div>
-</section>
-
-
-		<!-- One -->
-<section id="one" class="main style1">
-  <div class="container">
-    <div class="row gtr-150">
-      <!-- LEFT: summary card -->
-      <div class="col-6 col-12-medium">
-        <div class="summary-card">
-          <header class="major">
-            <h2>Ferra Suryani</h2>
-          </header>
-
-          <p>
-            NYC-based Data Scientist with 3+ years in martech/adtech and an M.S. in Applied Analytics (Columbia).
-            I design and integrate experimental methods, causal inference, and machine learning to drive growth, optimize performance and measurement.
-          </p>
-
-          <!-- skills / interests as chips -->
-          <ul class="chips">
-			<li class="chip">Generative Engine Optimization (GEO)</li>
-			<li class="chip">AI for consumer behavior</li>
-			<li class="chip">Uplift Modeling</li>
-            <li class="chip">Experimentation Design</li>
-            <li class="chip">Ads Optimization</li>
-            <li class="chip">Recommender Systems</li>
-            <li class="chip">Personalization Algorithms</li>
-            <li class="chip">Quantitative Marketing Models</li>
-          </ul>
-
-			<p></p>
-
-          <!-- quick facts grid -->
-			<div class="quick-facts">
-			  <div class="fact">
-			    <span class="icon solid fa-map-marker-alt" aria-hidden="true"></span>
-			    <div class="fact-text">
-			      <small>Location</small><strong>New York, NY</strong>
-			    </div>
-			  </div>
-			
-			  <div class="fact">
-			    <span class="icon solid fa-briefcase" aria-hidden="true"></span>
-			    <div class="fact-text">
-			      <small>Experience</small><strong>3+ years</strong>
-			    </div>
-			  </div>
-			
-			  <div class="fact">
-			    <span class="icon solid fa-university" aria-hidden="true"></span>
-			    <div class="fact-text">
-			      <small>Education</small><strong>Columbia University (M.S.)</strong>
-			    </div>
-			  </div>
-			
-			  <div class="fact">
-			    <span class="icon solid fa-microscope" aria-hidden="true"></span>
-			    <div class="fact-text">
-			      <small>Focus Areas</small><strong>Quantitative Marketing</strong>
-			    </div>
-			  </div>
-			</div>
-
-			<p></p>
-        </div>
+        <a href="https://github.com/ferrasuryani98" target="_blank" rel="noopener" class="btn btn-outline">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49l-.01-1.7c-2.78.62-3.37-1.37-3.37-1.37-.46-1.18-1.11-1.5-1.11-1.5-.9-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.9 1.57 2.34 1.12 2.91.86.09-.66.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.7 0 0 .84-.28 2.75 1.05a9.34 9.34 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.4.2 2.44.1 2.7.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.8-4.57 5.05.36.32.68.94.68 1.9l-.01 2.8c0 .27.18.6.69.49A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></svg>
+          GitHub
+        </a>
+        <a href="https://drive.google.com/file/d/1DmAcDTZvVwdrJv8QQC9LLRqPNVZ5a53x/view?usp=sharing" target="_blank" rel="noopener" class="btn btn-outline">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 3v4a1 1 0 0 0 1 1h4M17 21H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7l5 5v11a2 2 0 0 1-2 2z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Résumé
+        </a>
       </div>
-
-      <!-- RIGHT: photo -->
-      <div class="col-6 col-12-medium imp-medium">
-        <span class="image fit avatar">
-          <img src="images/profile_pic.png"
-               alt="Ferra Suryani at Columbia’s campus in graduation regalia" loading="lazy" />
-        </span>
+      <div class="hero-stack">
+        <span>Python</span><span>SQL</span><span>AWS · Redshift</span><span>Causal Inference</span><span>Experimentation</span>
       </div>
     </div>
   </div>
 </section>
 
+<!-- ================= ABOUT ================= -->
+<section id="about" class="section section--alt">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-bio reveal">
+        <p class="eyebrow">About</p>
+        <h2 style="font-size:clamp(1.7rem,3.4vw,2.4rem);margin-bottom:18px">Ferra Suryani</h2>
+        <p>NYC data scientist with 3+ years in martech and adtech and an M.S. from Columbia University. I use experimentation, causal inference, and machine learning to turn messy business questions into models and experiments teams can actually act on.</p>
+        <ul class="chips">
+          <li class="chip">Causal Inference</li>
+          <li class="chip">Experimentation Design</li>
+          <li class="chip">Uplift Modeling</li>
+          <li class="chip">Marketing-Mix Modeling</li>
+          <li class="chip">Recommender Systems</li>
+          <li class="chip">Multi-Touch Attribution</li>
+          <li class="chip">Personalization</li>
+          <li class="chip">Quantitative Marketing</li>
+        </ul>
+      </div>
+      <div class="reveal">
+        <div class="glance">
+          <div class="glance-head">At a glance</div>
+          <ul class="glance-list">
+            <li><small>Location</small><strong>New York, NY</strong></li>
+            <li><small>Experience</small><strong>3+ years in martech / adtech</strong></li>
+            <li><small>Education</small><strong>Columbia University, M.S.</strong></li>
+            <li><small>Focus</small><strong>Growth &amp; Measurement</strong></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-		<!-- Two -->
-		
-		<section id="two" class="main style2">
-		  <div class="container exp-wrap">
-		    <header class="major align-center">
-		      <h2><strong>I bring expertise in...</strong></h2>
-		    </header>
+<!-- ================= EXPERTISE ================= -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">What I bring</p>
+    </div>
+    <div class="cards-3">
+      <div class="xcard reveal">
+        <div class="xnum">01</div>
+        <h3>Experimentation for growth</h3>
+        <p>Designing and reading experiments end to end (hypothesis, power, randomization, analysis) to grow revenue and separate real lift from noise.</p>
+        <ul class="pills"><li class="pill">A/B Testing</li><li class="pill">Power Analysis</li><li class="pill">CUPED</li><li class="pill">Causal Inference</li></ul>
+      </div>
+      <div class="xcard reveal">
+        <div class="xnum">02</div>
+        <h3>Predictive modeling that ships</h3>
+        <p>Building recommender systems, multi-touch attribution, uplift, and customer-lifetime-value models from the ground up, then putting them into production.</p>
+        <ul class="pills"><li class="pill">Python</li><li class="pill">XGBoost</li><li class="pill">Recommenders</li><li class="pill">CLV</li></ul>
+      </div>
+      <div class="xcard reveal">
+        <div class="xnum">03</div>
+        <h3>Pipelines &amp; automation</h3>
+        <p>Standing up data pipelines and scripting away the manual work with APIs and the CLI, so the team spends its time on higher-impact analysis.</p>
+        <ul class="pills"><li class="pill">AWS</li><li class="pill">Redshift</li><li class="pill">Git</li><li class="pill">APIs</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
 
-			  <!-- Column 1 -->
-				<div class="col-4 col-12-medium">
-				  <div class="expertise-card">
-				    <h4><strong>Experimentation for Growth</strong></h4>
-				    <p>Solid background in implementing hypothesis testing, designing experiments, and applying statistical analysis to maximize revenue and accelerate growth</p>
-				
-				    <ul class="actions special skill-pills">
-				      <li><a class="pill">A/B Testing</a></li>
-				      <li><a class="pill">Power Analysis</a></li>
-				      <li><a class="pill">CUPED</a></li>
-				      <li><a class="pill">SQL</a></li>
-				    </ul>
-				  </div>
-				</div>
+<!-- ================= EXPERIENCE ================= -->
+<section id="experience" class="section section--alt">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Experience</p>
+      <p>Applied data science across the adtech and martech stack: modeling, experimentation, and the infrastructure behind both.</p>
+    </div>
+    <div class="timeline">
+      <div class="tl-item current reveal">
+        <span class="tl-dot"></span>
+        <p class="tl-date">2022 — Present</p>
+        <h3 class="tl-role">Senior Analyst, Data Science</h3>
+        <p class="tl-company">Annalect (Omnicom Media Group), New York</p>
+        <ul class="tl-list">
+          <li>Build lookalike and audience-scoring models and the audience-building pipelines behind them, moving scoring data between S3 and Redshift at scale.</li>
+          <li>Run segment-overlap and audience analysis to guide targeting and measurement decisions for enterprise brand campaigns.</li>
+          <li>Automate recurring data workflows like session-token retrieval, format conversion, and platform reporting, cutting manual steps out of the loop.</li>
+          <li>Partner with strategy and media teams to translate marketing questions into models, experiments, and clear readouts.</li>
+        </ul>
+        <ul class="tl-tags pills">
+          <li class="pill">Python</li><li class="pill">SQL</li><li class="pill">AWS S3</li><li class="pill">Redshift</li><li class="pill">XGBoost</li><li class="pill">Selenium</li>
+        </ul>
+      </div>
+      <div class="tl-item reveal">
+        <span class="tl-dot"></span>
+        <p class="tl-date">2021 — 2022</p>
+        <h3 class="tl-role">Data Science / Analytics</h3>
+        <p class="tl-company">Earlier role: add company and dates</p>
+        <ul class="tl-list">
+          <li>Placeholder: drop in your prior title, employer, and 2 to 3 impact-focused bullets (what you built, the method, the outcome).</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
 
-								  <!-- Column 2 -->
-					<div class="col-4 col-12-medium">
-					  <div class="expertise-card">
-					    <h4><strong>Predictive Modeling for Data-Driven Solutions</strong></h4>
-					    <p>Developed ML- and statistics-driven recommender systems, multi-touch attribution models, and Customer Lifetime Value (CLV) frameworks from the ground up</p>
-				
-					    <ul class="actions special skill-pills">
-					      <li><a class="pill">Python</a></li>
-					      <li><a class="pill">XGBoost</a></li>
-					      <li><a class="pill">Recommenders</a></li>
-					      <li><a class="pill">CLV</a></li>
-					    </ul>
-					  </div>
-					</div>
+<!-- ================= SKILLS ================= -->
+<section id="skills" class="section">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Technical toolkit</p>
+    </div>
+    <div class="skill-grid">
+      <div class="skill-block reveal">
+        <h4>Languages &amp; Querying</h4>
+        <ul class="skill-tags"><li>Python</li><li>SQL</li><li>R</li><li>Bash / CLI</li></ul>
+      </div>
+      <div class="skill-block reveal">
+        <h4>ML &amp; Statistics</h4>
+        <ul class="skill-tags"><li>XGBoost</li><li>Scikit-learn</li><li>Regression</li><li>Classification</li><li>PCA</li><li>Bayesian Methods</li></ul>
+      </div>
+      <div class="skill-block reveal">
+        <h4>Experimentation &amp; Causal</h4>
+        <ul class="skill-tags"><li>A/B Testing</li><li>Power Analysis</li><li>CUPED</li><li>Uplift Modeling</li><li>Multi-Touch Attribution</li><li>Marketing-Mix Modeling</li></ul>
+      </div>
+      <div class="skill-block reveal">
+        <h4>Data &amp; Cloud</h4>
+        <ul class="skill-tags"><li>AWS S3</li><li>Amazon Redshift</li><li>Data Pipelines</li><li>ETL</li><li>APIs</li></ul>
+      </div>
+      <div class="skill-block reveal">
+        <h4>NLP</h4>
+        <ul class="skill-tags"><li>TF-IDF</li><li>Tokenization</li><li>Topic Modeling (LDA)</li><li>Sentiment Analysis</li></ul>
+      </div>
+      <div class="skill-block reveal">
+        <h4>Tooling &amp; Workflow</h4>
+        <ul class="skill-tags"><li>Git / GitHub</li><li>Jupyter</li><li>Selenium</li><li>Version Control</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
 
-								  <!-- Column 3 -->
-					<div class="col-4 col-12-medium">
-					  <div class="expertise-card">
-					    <h4><strong>Optimizing Workflow</strong></h4>
-					    <p>Skilled in using APIs and building scripts to automate workflows and minimize manual processes, enabling greater focus on higher-impact projects</p>
-					
-					    <ul class="actions special skill-pills">
-					      <li><a class="pill">CLI</a></li>
-					      <li><a class="pill">Version Control</a></li>
-					      <li><a class="pill">Git</a></li>
-					      <li><a class="pill">APIs</a></li>
-					    </ul>
-					  </div>
-					</div>
-		  </div>
-		</section>
+<!-- ================= PROJECTS ================= -->
+<section id="projects" class="section section--alt">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Selected work</p>
+      <p>Things I've built because I love data, modeling, and automating the boring parts.</p>
+    </div>
+    <div class="proj-grid">
 
-		<!-- Three -->
-			<section id="three" class="main style1 special">
-				<div class="container">
-          <header class="major">
-            <h2>Projects Library</h2>
-          </header>
-					<p>I love data, building, and automating, so I've done these </p>
-					<div class="row gtr-150">
+      <article class="proj reveal">
+        <div class="proj-top">
+          <svg viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><rect x="28" y="64" width="10" height="28" rx="3"/><rect x="46" y="54" width="10" height="38" rx="3"/><rect x="64" y="44" width="10" height="48" rx="3"/><rect x="82" y="58" width="10" height="34" rx="3"/><path d="M20 88c8-24 18-36 30-36s22 12 30 36"/></svg>
+        </div>
+        <div class="proj-body">
+          <h3>Bayesian MMM Lite</h3>
+          <p>A minimal, readable Bayesian marketing-mix model: NumPy Gibbs sampler, adstock and saturation, credible-interval predictions, channel contributions, and a simple budget optimizer.</p>
+          <ul class="proj-tags"><li>Bayesian</li><li>NumPy</li><li>MMM</li></ul>
+          <div class="proj-links">
+            <a href="https://github.com/ferrasuryani98/mmm_lite" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49l-.01-1.7c-2.78.62-3.37-1.37-3.37-1.37-.46-1.18-1.11-1.5-1.11-1.5-.9-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.9 1.57 2.34 1.12 2.91.86.09-.66.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.7 0 0 .84-.28 2.75 1.05a9.34 9.34 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.4.2 2.44.1 2.7.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.8-4.57 5.05.36.32.68.94.68 1.9l-.01 2.8c0 .27.18.6.69.49A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></svg>
+              Repo
+            </a>
+            <a href="https://medium.com/@ferratan1998/bayesian-mmm-lite-a-fast-and-tiny-marketing-mix-model-you-can-actually-understand-6f1d565acf4f" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 3v4a1 1 0 0 0 1 1h4M17 21H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7l5 5v11a2 2 0 0 1-2 2z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Write-up
+            </a>
+          </div>
+        </div>
+      </article>
 
-						<!-- col 1 -->
-						<div class="col-4 col-12-medium">
-						  <article class="project-card">
-							<span class="image fit project-thumb">
-							  <!-- Icon: Bayesian MMM Lite (bars + bell curve) -->
-							  <svg class="proj-icon" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-							    <g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-							      <rect x="6" y="6" width="108" height="108" rx="14" opacity=".25"/>
-							      <rect x="28" y="64" width="10" height="28" rx="3"/>
-							      <rect x="46" y="54" width="10" height="38" rx="3"/>
-							      <rect x="64" y="44" width="10" height="48" rx="3"/>
-							      <rect x="82" y="58" width="10" height="34" rx="3"/>
-							      <path d="M20 88c8-24 18-36 30-36s22 12 30 36" />
-							      <path d="M20 88h80" opacity=".6"/>
-							    </g>
-							  </svg>
-							</span>
-						    <h3>Bayesian MMM Lite</h3>
-						    <p>Built a minimal Bayesian MMM with readable NumPy Gibbs sampler, adstock and saturation, simulator, credible-interval predictions, channel contributions, and simple budget optimizer</p>
-						    <ul class="actions special actions-row">
-								  <li>
-								    <a href="https://github.com/ferrasuryani98/mmm_lite"
-								       class="button" target="_blank" rel="noopener">
-								      View GitHub Repo
-								    </a>
-								  </li>
-								  <li>
-								    <a href="https://medium.com/@ferratan1998/bayesian-mmm-lite-a-fast-and-tiny-marketing-mix-model-you-can-actually-understand-6f1d565acf4f"
-								       class="button btn-blue-outline-sm" target="_blank" rel="noopener">
-								      View Medium Post
-								    </a>
-								  </li>
-								</ul>
-						  </article>
-						</div>
+      <article class="proj reveal">
+        <div class="proj-top">
+          <svg viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><rect x="18" y="32" width="84" height="56" rx="10"/><path d="M60 32v56" opacity=".5"/><path d="M70 78l6 6 12-12"/></svg>
+        </div>
+        <div class="proj-body">
+          <h3>A/B Test: Food Delivery Promos</h3>
+          <p>A 50/50 randomized experiment ("Free Delivery" vs "$5 Off") simulated to maximize net incremental revenue per 1,000 exposures, with power analysis and significance testing throughout.</p>
+          <ul class="proj-tags"><li>A/B Testing</li><li>Causal</li><li>Python</li></ul>
+          <div class="proj-links">
+            <a href="https://github.com/ferrasuryani98/uber-eats-ab-testing-simulation" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49l-.01-1.7c-2.78.62-3.37-1.37-3.37-1.37-.46-1.18-1.11-1.5-1.11-1.5-.9-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.9 1.57 2.34 1.12 2.91.86.09-.66.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.7 0 0 .84-.28 2.75 1.05a9.34 9.34 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.4.2 2.44.1 2.7.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.8-4.57 5.05.36.32.68.94.68 1.9l-.01 2.8c0 .27.18.6.69.49A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></svg>
+              Repo
+            </a>
+            <a href="https://medium.com/@ferratan1998/free-delivery-vs-5-off-which-promo-actually-makes-money-eb82c1a326e0" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 3v4a1 1 0 0 0 1 1h4M17 21H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7l5 5v11a2 2 0 0 1-2 2z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Write-up
+            </a>
+          </div>
+        </div>
+      </article>
 
-						<!-- col 2 -->
-						<div class="col-4 col-12-medium">
-						  <article class="project-card">
-							  <span class="image fit project-thumb">
-								<svg class="proj-icon" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-								  <g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-								    <rect x="6" y="6" width="108" height="108" rx="14" opacity=".25"/>
-								    <rect x="18" y="32" width="84" height="56" rx="10"/>
-								    <path d="M60 32v56" opacity=".6"/>
-								    <text x="36" y="66" font-size="18" font-family="ui-sans-serif,system-ui" fill="currentColor">A</text>
-								    <text x="78" y="66" font-size="18" font-family="ui-sans-serif,system-ui" fill="currentColor">B</text>
-								    <path d="M70 78l6 6 12-12"/>
-								  </g>
-								</svg>
+      <article class="proj reveal">
+        <div class="proj-top">
+          <svg viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M28 84h30c6 0 10 4 10 10V40c0-6-4-10-10-10H28z"/><path d="M62 30h30v54H68"/><circle cx="76" cy="38" r="4"/><circle cx="92" cy="52" r="4"/><circle cx="84" cy="66" r="4"/><path d="M76 38l14 12M92 52l-8 14"/></svg>
+        </div>
+        <div class="proj-body">
+          <h3>Inside the Realist's Mind</h3>
+          <p>An NLP study of how Aristotle and Locke reason across their major works, using bigram analysis, tokenization, TF-IDF weighting, and LDA topic modeling to surface each thinker's themes.</p>
+          <ul class="proj-tags"><li>NLP</li><li>TF-IDF</li><li>LDA</li></ul>
+          <div class="proj-links">
+            <a href="https://github.com/ferrasuryani98/investigate-realists-mind" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49l-.01-1.7c-2.78.62-3.37-1.37-3.37-1.37-.46-1.18-1.11-1.5-1.11-1.5-.9-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.9 1.57 2.34 1.12 2.91.86.09-.66.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.7 0 0 .84-.28 2.75 1.05a9.34 9.34 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.4.2 2.44.1 2.7.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.8-4.57 5.05.36.32.68.94.68 1.9l-.01 2.8c0 .27.18.6.69.49A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></svg>
+              Repo
+            </a>
+          </div>
+        </div>
+      </article>
 
-							</span>
-						    <h3>A/B Testing: Food Delivery App</h3>
-						    <p>Designed a 50/50 randomized A/B (“Free Delivery” vs “$5 Off”) simulation to maximize Net Incremental Revenue / 1,000 exposure</p>
-							<ul class="actions special actions-row">
-								  <li>
-								    <a href="https://github.com/ferrasuryani98/uber-eats-ab-testing-simulation" class="button" target="_blank" rel="noopener">
-								      View GitHub Repo
-								    </a>
-								  </li>
-								  <li>
-								    <a href="https://medium.com/@ferratan1998/free-delivery-vs-5-off-which-promo-actually-makes-money-eb82c1a326e0"
-								       class="button btn-blue-outline-sm" target="_blank" rel="noopener">
-								      View Medium Post
-								    </a>
-								  </li>
-								</ul>
-						  </article>
-						</div>
+      <article class="proj reveal">
+        <div class="proj-top">
+          <svg viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M26 64l34-24 34 24"/><path d="M34 62v30h52V62"/><rect x="54" y="74" width="12" height="18" rx="2"/></svg>
+        </div>
+        <div class="proj-body">
+          <h3>Predicting NYC Airbnb Prices</h3>
+          <p>A gradient-boosting model in R predicting rental price across 40,000+ NYC listings and 90 variables, with a full pipeline from wrangling and feature engineering to cross-validation and training.</p>
+          <ul class="proj-tags"><li>R</li><li>Gradient Boosting</li><li>Feature Eng.</li></ul>
+          <div class="proj-links">
+            <!-- TODO: swap in the correct repo URL -->
+            <a href="https://github.com/ferrasuryani98?tab=repositories" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49l-.01-1.7c-2.78.62-3.37-1.37-3.37-1.37-.46-1.18-1.11-1.5-1.11-1.5-.9-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.9 1.57 2.34 1.12 2.91.86.09-.66.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.7 0 0 .84-.28 2.75 1.05a9.34 9.34 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.4.2 2.44.1 2.7.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.8-4.57 5.05.36.32.68.94.68 1.9l-.01 2.8c0 .27.18.6.69.49A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></svg>
+              Repo
+            </a>
+          </div>
+        </div>
+      </article>
 
-						<!-- col 3 -->
-						<div class="col-4 col-12-medium">
-						  <article class="project-card">
-						    <span class="image fit project-thumb">
-						      <svg class="proj-icon" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-								  <g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-								    <rect x="6" y="6" width="108" height="108" rx="14" opacity=".25"/>
-								    <path d="M28 84h30c6 0 10 4 10 10V40c0-6-4-10-10-10H28v54z"/>
-								    <path d="M28 30h30c6 0 10 4 10 10"/>
-								    <path d="M62 30h30v54H68" opacity=".8"/>
-								    <circle cx="76" cy="38" r="5"/><circle cx="92" cy="50" r="5"/><circle cx="84" cy="66" r="5"/>
-								    <path d="M76 38l14 10M92 50l-8 16"/>
-								  </g>
-								</svg>
+      <article class="proj reveal">
+        <div class="proj-top">
+          <svg viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M26 40h68v32a10 10 0 0 1-10 10H54l-14 10V82H36a10 10 0 0 1-10-10z"/><path d="M44 56l3-6 3 6 6 .5-5 4 1.5 6-5-3-5 3 1.5-6-5-4z"/></svg>
+        </div>
+        <div class="proj-body">
+          <h3>Customer-Review NLP · Central Garden &amp; Pet</h3>
+          <p>A data-consulting engagement mining customer-review text for a consumer brand, using sentiment and theme extraction with tokenization, TF-IDF, and topic modeling to surface what drives product and service perception.</p>
+          <ul class="proj-tags"><li>NLP</li><li>Consulting</li><li>Sentiment</li></ul>
+          <div class="proj-links">
+            <a href="https://drive.google.com/file/d/1KSIxi9h1zfCDMAVZXoN_-n7rx46-LevB/view?usp=sharing" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 3v4a1 1 0 0 0 1 1h4M17 21H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7l5 5v11a2 2 0 0 1-2 2z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Summary
+            </a>
+          </div>
+        </div>
+      </article>
 
-						    </span>
-						    <h3>Diving deep into realist's mind</h3>
-						    <p>Investigating the mind of two key realism philosophers (Aristotle and Locke) and the way they think through NLP in each of their respective works. Algorithms used include bigram analysis, tokenization, TF-IDF to weigh the importance of each word, and LDA for topic modeling</p>
-						    <ul class="actions special">
-						      <li><a href="https://github.com/ferrasuryani98/investigate-realists-mind" class="button">View GitHub Repo</a></li>
-						    </ul>
-						  </article>
-						</div>
-				<div class="container">
-					<div class="row gtr-150">
+      <article class="proj reveal">
+        <div class="proj-top">
+          <svg viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M26 70v-4a34 34 0 0 1 68 0v4"/><rect x="22" y="66" width="18" height="24" rx="6"/><rect x="80" y="66" width="18" height="24" rx="6"/><path d="M50 84v-10M58 88v-18M66 86v-14M74 84v-10"/></svg>
+        </div>
+        <div class="proj-body">
+          <h3>Song Genre Classification</h3>
+          <p>A Python classifier distinguishing HipHop from Rock using track features, with decision trees and logistic regression plus PCA to compress the feature space and lift performance.</p>
+          <ul class="proj-tags"><li>Classification</li><li>PCA</li><li>Python</li></ul>
+          <div class="proj-links">
+            <a href="https://github.com/ferrasuryani98/classify-song-genre-python" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49l-.01-1.7c-2.78.62-3.37-1.37-3.37-1.37-.46-1.18-1.11-1.5-1.11-1.5-.9-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.9 1.57 2.34 1.12 2.91.86.09-.66.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.7 0 0 .84-.28 2.75 1.05a9.34 9.34 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.4.2 2.44.1 2.7.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.8-4.57 5.05.36.32.68.94.68 1.9l-.01 2.8c0 .27.18.6.69.49A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></svg>
+              Repo
+            </a>
+          </div>
+        </div>
+      </article>
 
-						<!-- col 4 -->
-						<div class="col-4 col-12-medium">
-						  <article class="project-card">
-						    <span class="image fit project-thumb">
-						      <svg class="proj-icon" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-								  <g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-								    <rect x="6" y="6" width="108" height="108" rx="14" opacity=".25"/>
-								    <path d="M26 64l34-24 34 24" />
-								    <path d="M34 62v30h52V62" />
-								    <rect x="54" y="74" width="12" height="18" rx="2"/>
-								    <path d="M78 40l14 2 2 14-12 12-12-12 8-16z" opacity=".9"/>
-								    <path d="M90 44.5a2.5 2.5 0 1 1 0 .01z" fill="currentColor"/>
-								  </g>
-								</svg>
+    </div>
+  </div>
+</section>
 
-						    </span>
-						    <h3>Predicting Airbnb rental price in New York</h3>
-						    <p>Using gradient boosting algorithm, I built a model in R to predict Airbnb rental price; process includes data wrangling, data manipulation, feature selection and engineering, cross-validation, and model building and training. The dataset describes property, host, and reviews for over 40,000 Airbnb rentals in New York along 90 variables</p>
-						    <ul class="actions special">
-						      <li><a href="https://github.com/ferrasuryani98/investigate-realists-mind" class="button">View GitHub Repo</a></li>
-						    </ul>
-						  </article>
-						</div>
-						<!-- col 5 -->
-						<div class="col-4 col-12-medium">
-						  <article class="project-card">
-						    <span class="image fit project-thumb">
-						      <svg class="proj-icon" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-								  <g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-								    <rect x="6" y="6" width="108" height="108" rx="14" opacity=".25"/>
-								    <path d="M26 40h68v32a10 10 0 0 1-10 10H54l-14 10V82H36a10 10 0 0 1-10-10V40z"/>
-								    <path d="M44 56l3-6 3 6 6 .5-5 4 1.5 6-5-3-5 3 1.5-6-5-4 6-.5z" />
-								    <path d="M72 56l2-4 2 4 4 .4-3.5 3 .9 4.6-3.4-2.2-3.4 2.2.9-4.6-3.5-3 4-.4z" />
-								  </g>
-								</svg>
-						    </span>
-						    <h3>NLP model for customer reviews: Data Consulting project with Central Garden & Pet</h3>
-						    <p>Using gradient boosting algorithm, I built a model in R to predict Airbnb rental price; process includes data wrangling, data manipulation, feature selection and engineering, cross-validation, and model building and training. The dataset describes property, host, and reviews for over 40,000 Airbnb rentals in New York along 90 variables</p>
-						    <ul class="actions special">
-						      <li><a href="https://drive.google.com/file/d/1KSIxi9h1zfCDMAVZXoN_-n7rx46-LevB/view?usp=sharing" class="button">View Summary</a></li>
-						    </ul>
-						  </article>
-						</div>
+<!-- ================= WRITING ================= -->
+<section id="writing" class="section">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Writing</p>
+      <p>Long-form pieces where I break down methods I actually use, the kind of thinking I bring to a team.</p>
+    </div>
+    <div class="posts">
+      <a class="post reveal" href="https://medium.com/@ferratan1998/bayesian-mmm-lite-a-fast-and-tiny-marketing-mix-model-you-can-actually-understand-6f1d565acf4f" target="_blank" rel="noopener">
+        <p class="post-tag">Marketing-Mix Modeling</p>
+        <h3>Bayesian MMM Lite: a tiny marketing-mix model you can actually understand</h3>
+        <p>Building a readable Bayesian MMM from scratch: adstock, saturation, and credible intervals without the black box.</p>
+      </a>
+      <a class="post reveal" href="https://medium.com/@ferratan1998/free-delivery-vs-5-off-which-promo-actually-makes-money-eb82c1a326e0" target="_blank" rel="noopener">
+        <p class="post-tag">Experimentation</p>
+        <h3>Free delivery vs. $5 off: which promo actually makes money?</h3>
+        <p>Using a randomized experiment to measure net incremental revenue, and why the intuitive answer isn't always right.</p>
+      </a>
+    </div>
+    <a class="post-more" href="https://medium.com/@ferratan1998" target="_blank" rel="noopener">
+      Read more on Medium
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </div>
+</section>
 
-						<!-- col 6 -->
-						<div class="col-4 col-12-medium">
-						  <article class="project-card">
-						    <span class="image fit project-thumb">
-						      <svg class="proj-icon" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-							  <g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-							    <rect x="6" y="6" width="108" height="108" rx="14" opacity=".25"/>
-							    <path d="M26 70v-4a34 34 0 0 1 68 0v4"/>
-							    <rect x="22" y="66" width="18" height="24" rx="6"/>
-							    <rect x="80" y="66" width="18" height="24" rx="6"/>
-							    <path d="M50 84v-10M58 88v-18M66 86v-14M74 84v-10" />
-							  </g>
-							</svg>
-						    </span>
-						    <h3>Song Genre Classification</h3>
-						    <p>Trained a classifier in Python to distinguish between HipHop and Rock genres based on track information and implemented decision trees and logistics regression techniques and improved model performance using Principal Component Analysis (PCA)</p>
-						    <ul class="actions special">
-						      <li><a href="https://github.com/ferrasuryani98/classify-song-genre-python" class="button">View Github Repo</a></li>
-						    </ul>
-						  </article>
-						</div>
-					</div>
-				</div>
-			</section>
-<!-- 
-		<!-- Four -->
-<!-- 			<section id="four" class="main style2 special">
-				<div class="container">
-					<header class="major">
-						<h2>Ipsum feugiat consequat?</h2>
-					</header>
-					<p>Sed lacus nascetur ac ante amet sapien.</p>
-					<ul class="actions special">
-						<li><a href="#" class="button wide primary">Sign Up</a></li>
-						<li><a href="#" class="button wide">Learn More</a></li>
-					</ul>
-				</div>
-			</section> --> -->
+<!-- ================= EDUCATION ================= -->
+<section class="section section--alt">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Education</p>
+    </div>
+    <div class="edu-grid reveal">
+      <div class="edu">
+        <span class="edu-mark">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1 2.5 3 6 3s6-2 6-3v-5"/><path d="M22 10v6"/></svg>
+        </span>
+        <div>
+          <h3>M.S., Applied Analytics</h3>
+          <p class="edu-sub">Columbia University · New York, NY</p>
+          <p>Graduate training in applied statistics, machine learning, and experimental design, focused on translating quantitative methods into business decisions.</p>
+        </div>
+      </div>
+      <div class="edu">
+        <span class="edu-mark">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1 2.5 3 6 3s6-2 6-3v-5"/><path d="M22 10v6"/></svg>
+        </span>
+        <div>
+          <h3>B.S., [Your Major]</h3>
+          <p class="edu-sub">[University] · [Location]</p>
+          <p>Add your undergraduate degree, school, and a short line on your focus or standout coursework.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-		<!-- Five -->
-		<!--
-			<section id="five" class="main style1">
-				<div class="container">
-					<header class="major special">
-						<h2>Elements</h2>
-					</header>
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="section">
+  <div class="wrap">
+    <div class="contact reveal">
+      <h2>Let's talk data science</h2>
+      <p>I'm open to conversations about product and marketing data science roles. If your team is working on growth, measurement, or experimentation, I'd love to hear from you.</p>
+      <div class="contact-ctas">
+        <a href="mailto:ferra.k.suryani@gmail.com" class="btn btn-primary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M4 6l8 6 8-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Email me
+        </a>
+        <a href="https://www.linkedin.com/in/ferrasuryani/" target="_blank" rel="noopener" class="btn btn-outline">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 0 5 8.5a2.5 2.5 0 0 0-.02-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.4c0-1.3 0-2.95-1.8-2.95s-2.08 1.4-2.08 2.85V21H9z"/></svg>
+          LinkedIn
+        </a>
+        <a href="https://drive.google.com/file/d/1DmAcDTZvVwdrJv8QQC9LLRqPNVZ5a53x/view?usp=sharing" target="_blank" rel="noopener" class="btn btn-outline">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 3v4a1 1 0 0 0 1 1h4M17 21H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7l5 5v11a2 2 0 0 1-2 2z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Résumé
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
 
-					<section>
-						<h4>Text</h4>
-						<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
-						This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
-						This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
-						<hr />
-						<header>
-							<h4>Heading with a Subtitle</h4>
-							<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
-						</header>
-						<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
-						<header>
-							<h5>Heading with a Subtitle</h5>
-							<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
-						</header>
-						<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
-						<hr />
-						<h2>Heading Level 2</h2>
-						<h3>Heading Level 3</h3>
-						<h4>Heading Level 4</h4>
-						<h5>Heading Level 5</h5>
-						<h6>Heading Level 6</h6>
-						<hr />
-						<h5>Blockquote</h5>
-						<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
-						<h5>Preformatted</h5>
-						<pre><code>i = 0;
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="wrap foot-inner">
+    <span class="foot-copy">© 2026 Ferra Suryani · Built in NYC</span>
+    <ul class="foot-social">
+      <li><a href="https://github.com/ferrasuryani98" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49l-.01-1.7c-2.78.62-3.37-1.37-3.37-1.37-.46-1.18-1.11-1.5-1.11-1.5-.9-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.9 1.57 2.34 1.12 2.91.86.09-.66.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.7 0 0 .84-.28 2.75 1.05a9.34 9.34 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.4.2 2.44.1 2.7.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.8-4.57 5.05.36.32.68.94.68 1.9l-.01 2.8c0 .27.18.6.69.49A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></svg></a></li>
+      <li><a href="https://www.linkedin.com/in/ferrasuryani/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 0 5 8.5a2.5 2.5 0 0 0-.02-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.4c0-1.3 0-2.95-1.8-2.95s-2.08 1.4-2.08 2.85V21H9z"/></svg></a></li>
+      <li><a href="https://medium.com/@ferratan1998" target="_blank" rel="noopener" aria-label="Medium"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.37 7.3c.02-.2-.05-.4-.2-.5L2.6 5.02V4.7h5.03l3.88 8.53L15.4 4.7H20v.32l-1.32 1.27c-.1.08-.16.22-.13.35v9.32c-.03.13.03.27.13.35l1.3 1.27v.32h-6.5v-.32l1.34-1.3c.13-.13.13-.17.13-.36V8.1l-3.75 9.5h-.5L5.94 8.1v6.37c-.04.25.05.5.22.68l1.75 2.12v.32H2.9v-.32l1.75-2.12c.17-.18.25-.43.2-.68z"/></svg></a></li>
+      <li><a href="https://www.researchgate.net/profile/Ferra-Suryani" target="_blank" rel="noopener" aria-label="ResearchGate"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.6 2H4.4A2.4 2.4 0 0 0 2 4.4v15.2A2.4 2.4 0 0 0 4.4 22h15.2a2.4 2.4 0 0 0 2.4-2.4V4.4A2.4 2.4 0 0 0 19.6 2zM9.9 15.5c-.9 0-1.5-.3-2-1-.4-.5-.6-1.3-.6-2.5s.2-2 .7-2.6c.5-.6 1.2-.9 2.1-.9.7 0 1.3.2 1.7.6.4.3.6.8.7 1.3h-1.2c-.1-.6-.5-.9-1.1-.9-.5 0-.8.2-1 .5-.2.4-.3.9-.3 1.9s.1 1.5.3 1.9c.2.3.6.5 1.1.5.6 0 1-.3 1.1-.9v-.7h-1.1v-1h2.3v1.8c-.1.6-.4 1.1-.8 1.5-.5.5-1.1.7-1.9.7zm6.6-.1-1.4-2.6h-.9v2.6h-1.2V8.1h2.4c.8 0 1.4.2 1.8.5.4.4.6.9.6 1.5 0 .5-.1.9-.4 1.2-.2.3-.6.5-1 .6l1.5 2.9z"/><path d="M14.9 9.1h-1.1v2.1h1.1c.4 0 .7-.1.9-.3.2-.2.3-.4.3-.8 0-.3-.1-.6-.3-.7-.2-.2-.5-.3-.9-.3z"/></svg></a></li>
+      <li><a href="mailto:ferra.k.suryani@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+    </ul>
+  </div>
+</footer>
 
-while (!deck.isInOrder()) {
-print 'Iteration ' + i;
-deck.shuffle();
-i++;
-}
+<script>
+  const toggle = document.getElementById('navToggle');
+  const links = document.getElementById('navLinks');
+  toggle.addEventListener('click', () => links.classList.toggle('open'));
+  links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
 
-print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
-					</section>
+  const navMap = {};
+  document.querySelectorAll('.nav-links a').forEach(a => navMap[a.getAttribute('href').slice(1)] = a);
+  const spy = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        Object.values(navMap).forEach(a => a.classList.remove('active'));
+        if (navMap[e.target.id]) navMap[e.target.id].classList.add('active');
+      }
+    });
+  }, { rootMargin: '-45% 0px -50% 0px' });
+  document.querySelectorAll('section[id]').forEach(s => spy.observe(s));
 
-					<section>
-						<h4>Lists</h4>
-						<div class="row">
-							<div class="col-6 col-12-medium">
-								<h5>Unordered</h5>
-								<ul>
-									<li>Dolor pulvinar etiam.</li>
-									<li>Sagittis adipiscing.</li>
-									<li>Felis enim feugiat.</li>
-								</ul>
-								<h5>Alternate</h5>
-								<ul class="alt">
-									<li>Dolor pulvinar etiam.</li>
-									<li>Sagittis adipiscing.</li>
-									<li>Felis enim feugiat.</li>
-								</ul>
-							</div>
-							<div class="col-6 col-12-medium">
-								<h5>Ordered</h5>
-								<ol>
-									<li>Dolor pulvinar etiam.</li>
-									<li>Etiam vel felis viverra.</li>
-									<li>Felis enim feugiat.</li>
-									<li>Dolor pulvinar etiam.</li>
-									<li>Etiam vel felis lorem.</li>
-									<li>Felis enim et feugiat.</li>
-								</ol>
-								<h5>Icons</h5>
-								<ul class="icons">
-									<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-								</ul>
-							</div>
-						</div>
-						<h5>Actions</h5>
-						<div class="row">
-							<div class="col-6 col-12-medium">
-								<ul class="actions">
-									<li><a href="#" class="button primary">Default</a></li>
-									<li><a href="#" class="button">Default</a></li>
-								</ul>
-								<ul class="actions small">
-									<li><a href="#" class="button primary small">Small</a></li>
-									<li><a href="#" class="button small">Small</a></li>
-								</ul>
-								<ul class="actions stacked">
-									<li><a href="#" class="button primary">Default</a></li>
-									<li><a href="#" class="button">Default</a></li>
-								</ul>
-								<ul class="actions stacked">
-									<li><a href="#" class="button primary small">Small</a></li>
-									<li><a href="#" class="button small">Small</a></li>
-								</ul>
-							</div>
-							<div class="col-6 col-12-medium">
-								<ul class="actions stacked">
-									<li><a href="#" class="button primary fit">Default</a></li>
-									<li><a href="#" class="button fit">Default</a></li>
-								</ul>
-								<ul class="actions stacked">
-									<li><a href="#" class="button primary small fit">Small</a></li>
-									<li><a href="#" class="button small fit">Small</a></li>
-								</ul>
-							</div>
-						</div>
-					</section>
-
-					<section>
-						<h4>Table</h4>
-						<h5>Default</h5>
-						<div class="table-wrapper">
-							<table>
-								<thead>
-									<tr>
-										<th>Name</th>
-										<th>Description</th>
-										<th>Price</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Item One</td>
-										<td>Ante turpis integer aliquet porttitor.</td>
-										<td>29.99</td>
-									</tr>
-									<tr>
-										<td>Item Two</td>
-										<td>Vis ac commodo adipiscing arcu aliquet.</td>
-										<td>19.99</td>
-									</tr>
-									<tr>
-										<td>Item Three</td>
-										<td> Morbi faucibus arcu accumsan lorem.</td>
-										<td>29.99</td>
-									</tr>
-									<tr>
-										<td>Item Four</td>
-										<td>Vitae integer tempus condimentum.</td>
-										<td>19.99</td>
-									</tr>
-									<tr>
-										<td>Item Five</td>
-										<td>Ante turpis integer aliquet porttitor.</td>
-										<td>29.99</td>
-									</tr>
-								</tbody>
-								<tfoot>
-									<tr>
-										<td colspan="2"></td>
-										<td>100.00</td>
-									</tr>
-								</tfoot>
-							</table>
-						</div>
-
-						<h5>Alternate</h5>
-						<div class="table-wrapper">
-							<table class="alt">
-								<thead>
-									<tr>
-										<th>Name</th>
-										<th>Description</th>
-										<th>Price</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Item One</td>
-										<td>Ante turpis integer aliquet porttitor.</td>
-										<td>29.99</td>
-									</tr>
-									<tr>
-										<td>Item Two</td>
-										<td>Vis ac commodo adipiscing arcu aliquet.</td>
-										<td>19.99</td>
-									</tr>
-									<tr>
-										<td>Item Three</td>
-										<td> Morbi faucibus arcu accumsan lorem.</td>
-										<td>29.99</td>
-									</tr>
-									<tr>
-										<td>Item Four</td>
-										<td>Vitae integer tempus condimentum.</td>
-										<td>19.99</td>
-									</tr>
-									<tr>
-										<td>Item Five</td>
-										<td>Ante turpis integer aliquet porttitor.</td>
-										<td>29.99</td>
-									</tr>
-								</tbody>
-								<tfoot>
-									<tr>
-										<td colspan="2"></td>
-										<td>100.00</td>
-									</tr>
-								</tfoot>
-							</table>
-						</div>
-					</section>
-
-					<section>
-						<h4>Buttons</h4>
-						<ul class="actions">
-							<li><a href="#" class="button primary">Primary</a></li>
-							<li><a href="#" class="button">Default</a></li>
-						</ul>
-						<ul class="actions">
-							<li><a href="#" class="button large">Large</a></li>
-							<li><a href="#" class="button">Default</a></li>
-							<li><a href="#" class="button small">Small</a></li>
-						</ul>
-						<ul class="actions fit">
-							<li><a href="#" class="button fit">Fit</a></li>
-							<li><a href="#" class="button primary fit">Fit</a></li>
-							<li><a href="#" class="button fit">Fit</a></li>
-						</ul>
-						<ul class="actions fit small">
-							<li><a href="#" class="button primary fit small">Fit + Small</a></li>
-							<li><a href="#" class="button fit small">Fit + Small</a></li>
-							<li><a href="#" class="button primary fit small">Fit + Small</a></li>
-						</ul>
-						<ul class="actions">
-							<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
-							<li><a href="#" class="button icon solid fa-download">Icon</a></li>
-						</ul>
-						<ul class="actions">
-							<li><span class="button primary disabled">Disabled</span></li>
-							<li><span class="button disabled">Disabled</span></li>
-						</ul>
-					</section>
-
-					<section>
-						<h4>Form</h4>
-						<form method="post" action="#">
-							<div class="row gtr-uniform gtr-50">
-								<div class="col-6 col-12-xsmall">
-									<input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
-								</div>
-								<div class="col-6 col-12-xsmall">
-									<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
-								</div>
-								<div class="col-12">
-									<select name="demo-category" id="demo-category">
-										<option value="">- Category -</option>
-										<option value="1">Manufacturing</option>
-										<option value="1">Shipping</option>
-										<option value="1">Administration</option>
-										<option value="1">Human Resources</option>
-									</select>
-								</div>
-								<div class="col-4 col-12-small">
-									<input type="radio" id="demo-priority-low" name="demo-priority" checked>
-									<label for="demo-priority-low">Low</label>
-								</div>
-								<div class="col-4 col-12-small">
-									<input type="radio" id="demo-priority-normal" name="demo-priority">
-									<label for="demo-priority-normal">Normal</label>
-								</div>
-								<div class="col-4 col-12-small">
-									<input type="radio" id="demo-priority-high" name="demo-priority">
-									<label for="demo-priority-high">High</label>
-								</div>
-								<div class="col-6 col-12-small">
-									<input type="checkbox" id="demo-copy" name="demo-copy">
-									<label for="demo-copy">Email me a copy</label>
-								</div>
-								<div class="col-6 col-12-small">
-									<input type="checkbox" id="demo-human" name="demo-human" checked>
-									<label for="demo-human">Not a robot</label>
-								</div>
-								<div class="col-12">
-									<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
-								</div>
-								<div class="col-12">
-									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="primary" /></li>
-										<li><input type="reset" value="Reset" /></li>
-									</ul>
-								</div>
-							</div>
-						</form>
-					</section>
-
-					<section>
-						<h4>Image</h4>
-						<h5>Fit</h5>
-						<div class="box alt">
-							<div class="row gtr-uniform gtr-50">
-								<div class="col-12"><span class="image fit"><img src="images/pic06.jpg" alt="" /></span></div>
-								<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
-								<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
-								<div class="col-4"><span class="image fit"><img src="images/pic04.jpg" alt="" /></span></div>
-								<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
-								<div class="col-4"><span class="image fit"><img src="images/pic04.jpg" alt="" /></span></div>
-								<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
-								<div class="col-4"><span class="image fit"><img src="images/pic04.jpg" alt="" /></span></div>
-								<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
-								<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
-							</div>
-						</div>
-						<h5>Left &amp; Right</h5>
-						<p><span class="image left"><img src="images/pic05.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
-						<p><span class="image right"><img src="images/pic05.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
-					</section>
-
-				</div>
-			</section>
-		-->
-
-		<!-- Footer -->
-			<section id="footer">
-				<ul class="icons">
-					<li><a href="https://github.com/ferrasuryani98" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-					<li><a href="mailto:fks2114@columbia.edu" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
-					<li><a href="https://www.linkedin.com/in/ferrasuryani/" class="icon solid alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
-				</ul>
-				<ul class="copyright">
-					<li>&copy; made with <3 in NY by Ferra Suryani </li><li> Design creds: HTML5 UP</li>
-				</ul>
-			</section>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce) {
+    document.querySelectorAll('.reveal').forEach(el => el.style.opacity = 1);
+  } else {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  }
+</script>
+</body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
